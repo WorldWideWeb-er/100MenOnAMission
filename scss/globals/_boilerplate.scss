@@ -1,0 +1,19 @@
+@use "../util"; //Sass Module
+
+html {
+	box-sizing: border-box;
+	font-size: 100%;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0; //Resets
+	padding: 0; //Resets
+	font-family: util.$font; //Needs to be loaded from the 'util' module
+	background-color: var(--background-color);
+	color: var(--text-color);
+}

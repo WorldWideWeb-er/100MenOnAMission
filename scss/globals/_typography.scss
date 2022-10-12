@@ -1,0 +1,32 @@
+@use "../util" as u;
+h1,
+h2,
+h3 {
+	font-weight: 700;
+	line-height: 1.1;
+	margin-top: 0;
+}
+
+h1 {
+	//Font is atleast 16px + 2% of the view width
+	//font-size: calc(16px + 2vw);
+
+	//Font Clamp: (the smallest width, The desired width, the largest you want it to go)
+	//font-size: clamp(28px, 16px + 2vw, 40px);
+
+	//Using REM to handle font sizes on a per-brower basis
+	font-size: clamp(1.75rem, 1rem + 2vw, 2.5rem);
+
+	//Using Utility functions to convert pixels to rems
+	font-size: clamp(u.rem(28), u.rem(16) + 2vw, u.rem(40));
+}
+
+p {
+	margin-top: 0;
+}
+
+a,
+a:visited,
+a:active {
+	text-decoration: none;
+}

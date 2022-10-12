@@ -1,0 +1,138 @@
+@use "../util/" as u;
+
+.nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100vw;
+	padding: 0.5em 0;
+	border-bottom: 4px solid #653762;
+	&__picture {
+		width: u.em(210);
+		margin: auto;
+		img {
+			margin: 0;
+			width: 100%;
+		}
+		@include u.breakpoint(large) {
+			width: u.em(210);
+			padding: 0 2em;
+			margin: 0;
+			img {
+				width: 100%;
+			}
+		}
+	}
+	&__links {
+		display: flex;
+		flex: 1;
+		flex-direction: row;
+		align-items: center;
+		a {
+			border-left: 3px solid var(--text-color2);
+			padding: 0.25em 0.5em;
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 29px;
+			color: var(--text-color2);
+		}
+		a:first-child {
+			border-left: none;
+		}
+		a:hover {
+			cursor: pointer;
+		}
+		@media (max-width: 1230px) {
+			a {
+				font-size: 17px;
+			}
+		}
+		@include u.breakpoints-down(medium) {
+			display: none;
+		}
+	}
+	&__extras {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin-right: 2rem;
+		a {
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 29px;
+			color: var(--purple);
+		}
+		a:first-child {
+			padding: 0.5rem 1rem;
+			color: #ffffff;
+			background: #007922;
+			border: 3px solid #007922;
+			border-radius: 15px;
+			margin-right: 1em;
+		}
+		a:last-child {
+			border-left: 3px solid var(--purple);
+			padding: 0.4em 0 0.4em 1em;
+		}
+		a:hover {
+			cursor: pointer;
+		}
+		@media (max-width: 1230px) {
+			a {
+				font-size: 16px;
+			}
+			// a:first-child {
+			// 	display: none;
+			// }
+		}
+		@include u.breakpoints-down(medium) {
+			display: none;
+		}
+	}
+	//Mobile Navigation
+	&__mobile {
+		@include u.breakpoints-down(medium) {
+			display: flex;
+			align-items: center;
+			margin-right: 2rem;
+			&__overlay {
+				height: 100%;
+				width: 0;
+				position: fixed;
+				z-index: 1;
+				left: 0;
+				top: 0;
+				background-color: rgb(0, 0, 0);
+				background-color: rgba(0, 0, 0, 0.9);
+				overflow-x: hidden;
+				transition: 0.5s;
+				a {
+					padding: u.rem(6);
+					text-decoration: none;
+					font-size: u.rem(36);
+					color: var(--text-color2);
+					display: block;
+					transition: 0.2s;
+				}
+				a:hover,
+				a:focus {
+					color: #f1f1f1;
+				}
+				.closebtn {
+					position: absolute;
+					top: u.rem(8);
+					right: u.rem(30);
+					font-size: u.rem(60);
+				}
+				&__content {
+					position: relative;
+					top: 25%;
+					width: 100%;
+					text-align: center;
+					margin-top: u.rem(30);
+				}
+			}
+		}
+		display: none;
+	}
+}

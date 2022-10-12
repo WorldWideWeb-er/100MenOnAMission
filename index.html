@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>100+ Men on a Mission | DSM </title>
+        <link rel="stylesheet" href="/dist/style.css">
+    </head>
+    <body>
+        <nav class="nav">
+            <picture class="nav__picture">
+                <img src="img/logo.png" alt="100 Men on a Mission Logo">
+            </picture>
+            <div class="nav__links">
+                <a>How 100+ Works</a>
+                <a>Meetings</a>
+                <a>Charities & Projects</a>
+            </div>
+            <div class="nav__extras">
+                <a>Golf Outing</a>
+                <a>Contact Us</a>
+            </div>
+            <div class="nav__mobile">
+                <div id="mobile-nav" class="nav__mobile__overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="nav__mobile__overlay__content">
+                        <a>How 100+ Works</a>
+                        <a>Meetings</a>
+                        <a>Charities & Projects</a>
+                        <a>Golf Outing</a>
+                        <a>Contact Us</a>
+                    </div>
+                </div>
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+            </div>
+        </nav>
+        <div class="landingPage">
+            <picture class="landingPage__image">
+                <source media="(min-width: 650px)"  srcset="img/index_collage.png">
+                <img src="img/index_collage-mobile.png" alt="Picture collage of 100 Men on a Mission">
+            </picture>
+            <section class="landingPage__info">
+                <header><h1>100+ Men on a <span>Mission</span></h1></header>
+                    <p>We are a group of local men who are committed to supporting our local community in Des Moines, Iowa.</p>
+                    <a href="#"><button>Learn More</button></a>
+            </section>
+        </div>
+        <section class="missionStatement">
+
+        </section>
+        
+
+        <script>
+            function openNav() {
+              document.getElementById("mobile-nav").style.width = "100%";
+            }
+            
+            function closeNav() {
+              document.getElementById("mobile-nav").style.width = "0%";
+            }
+        </script>
+    </body>
+
+</html>
