@@ -1,4 +1,28 @@
+@use "../util/" as u;
+
 .missionStatement {
 	background-color: var(--light-purple);
-	height: 700px;
+	height: auto + u.rem(30);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include u.breakpoint(medium) {
+		height: min(100% + u.rem(30), u.rem(300));
+	}
+	p {
+		width: min(100% - u.rem(45), u.rem(1200));
+		padding: u.rem(20) 0;
+		font-weight: 500;
+		font-size: clamp(u.rem(25), u.rem(25) + 2vw, u.rem(32));
+		margin: 0;
+		line-height: u.rem(45);
+		text-align: center;
+		color: #ffffff;
+		@include u.breakpoint(medium) {
+			padding: u.rem(40) 0;
+			font-size: clamp(u.rem(25), u.rem(25) + 2vw, u.rem(50));
+			line-height: u.rem(65);
+		}
+	}
 }

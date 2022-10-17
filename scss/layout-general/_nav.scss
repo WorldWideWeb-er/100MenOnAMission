@@ -4,7 +4,7 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	width: 100vw;
+	width: 100%;
 	padding: 0.5em 0;
 	border-bottom: 4px solid #653762;
 	&__picture {
@@ -63,10 +63,9 @@
 			color: var(--purple);
 		}
 		a:first-child {
-			padding: 0.5rem 1rem;
+			padding: 0.4rem 1rem;
 			color: #ffffff;
 			background: #007922;
-			border: 3px solid #007922;
 			border-radius: 15px;
 			margin-right: 1em;
 		}
