@@ -1,0 +1,42 @@
+@use "../util/" as u;
+.header {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--purple);
+	padding: u.rem(30) 8% u.rem(15);
+	@include u.breakpoint(large) {
+		padding: u.rem(80) 8% u.rem(80) 12%;
+	}
+	h1,
+	h2,
+	p {
+		font-weight: 500;
+		color: #ffffff;
+	}
+	h1 {
+		font-size: clamp(u.rem(12), u.rem(15) + 5vw, u.rem(64));
+		margin-bottom: u.rem(10);
+		@include u.breakpoint(large) {
+			font-size: clamp(u.rem(12), u.rem(24) + 5vw, u.rem(64));
+		}
+	}
+	h2 {
+		font-size: clamp(u.rem(12), u.rem(15) + 5vw, u.rem(64));
+		@include u.breakpoint(large) {
+			font-size: clamp(u.rem(12), u.rem(24) + 5vw, u.rem(64));
+		}
+	}
+	p {
+		font-size: clamp(u.rem(12), u.rem(12) + 2vw, u.rem(36));
+		line-height: u.rem(25);
+		margin: 0;
+		@include u.breakpoint(medium) {
+			line-height: u.rem(30);
+		}
+		@include u.breakpoint(large) {
+			font-size: clamp(u.rem(12), u.rem(15) + 2vw, u.rem(36));
+			line-height: u.rem(44);
+		}
+	}
+}

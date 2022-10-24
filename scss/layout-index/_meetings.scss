@@ -2,11 +2,12 @@
 .meeting {
 	display: flex;
 	flex-direction: column;
+	margin-bottom: u.rem(20);
 	background: rgb(255, 255, 255);
 	background: linear-gradient(
 		180deg,
-		var(--light-purple) 50%,
-		var(--background-color) 50%
+		var(--light-purple) 35%,
+		var(--background-color) 35%
 	);
 	h1 {
 		margin: 0;
@@ -26,19 +27,27 @@
 	&__times {
 		display: grid;
 		grid-template-columns: 1fr;
-		margin: u.rem(40);
+		margin: u.rem(20);
+		margin-bottom: u.rem(20);
 		@include u.breakpoint(medium) {
 			grid-template-columns: 1fr 1fr;
+			margin: u.rem(40);
 		}
+
 		@include u.breakpoint(large) {
 			grid-template-columns: 1fr 1fr 1fr 1fr;
+			margin: u.rem(40);
+			@media (max-width: 1150px) {
+				margin-left: u.rem(10);
+				margin-right: u.rem(10);
+			}
 		}
+
 		&__indiv {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-around;
-			flex: 1;
-			padding: 0 u.rem(50);
+			padding: 0 0;
 			background-color: var(--purple);
 			@include u.breakpoint(medium) {
 				justify-content: center;
@@ -48,6 +57,9 @@
 			}
 			@include u.breakpoint(large) {
 				padding: u.rem(50);
+				@media (max-width: 1150px) {
+					padding: u.rem(40);
+				}
 			}
 			&.first {
 				border-radius: u.rem(10) u.rem(10) 0 0;
@@ -118,13 +130,13 @@
 				margin: 0;
 				min-width: u.rem(120);
 				font-weight: 500;
-				font-size: clamp(u.rem(2), u.rem(6) + 2vw, u.rem(24));
+				font-size: clamp(u.rem(5), u.rem(8) + 2vw, u.rem(24));
 				line-height: 39px;
 			}
 			h4 {
 				margin: 0;
 				font-weight: 500;
-				font-size: clamp(u.rem(2), u.rem(10) + 2vw, u.rem(64));
+				font-size: clamp(u.rem(12), u.rem(24) + 2vw, u.rem(64));
 				line-height: 77px;
 			}
 		}
@@ -135,5 +147,89 @@
 	&__info {
 		display: flex;
 		flex-direction: row;
+		&__desc {
+			display: flex;
+			flex: 1;
+			flex-direction: column;
+			justify-content: flex-end;
+			padding: u.rem(10) 15%;
+			@include u.breakpoint(medium) {
+				padding: u.rem(50) u.rem(0) u.rem(50) u.rem(50);
+			}
+			@include u.breakpoint(large) {
+				padding: u.rem(50) u.rem(0) u.rem(50) 0;
+
+				@media (max-width: 1150px) {
+					padding-left: u.rem(75);
+				}
+				padding-left: clamp(u.rem(75), u.rem(75) + 15vw, u.rem(200));
+			}
+			h3 {
+				margin-left: 0;
+				font-weight: bold;
+				font-size: clamp(u.rem(28), u.rem(28), u.rem(32));
+				width: fit-content;
+				line-height: u.rem(39);
+				@include u.breakpoint(large) {
+					margin-left: u.rem(20);
+				}
+			}
+			p {
+				font-weight: 500;
+				font-size: u.rem(24);
+				line-height: u.rem(29);
+				span:nth-of-type(1) {
+					font-weight: bolder;
+					color: var(--purple);
+				}
+				span:nth-of-type(2) {
+					font-size: u.rem(20);
+					font-weight: 500;
+					color: black;
+				}
+			}
+			&__times {
+				p {
+					margin-bottom: u.rem(5);
+					font-weight: 500;
+					font-size: u.rem(20);
+				}
+			}
+			button {
+				padding: u.rem(10);
+				margin-top: u.rem(15);
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 19px;
+				background-color: var(--purple);
+				border: none;
+				border-radius: 5px;
+				box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+				color: #ffffff;
+				cursor: pointer;
+			}
+		}
+		&__img {
+			display: flex;
+			flex: 1;
+			justify-content: flex-start;
+			align-items: center;
+			display: none;
+			@include u.breakpoint(medium) {
+				display: flex;
+				picture {
+					img {
+						width: 85%;
+					}
+				}
+			}
+			@include u.breakpoint(large) {
+				picture {
+					img {
+						width: min(100% - u.rem(20), 100%);
+					}
+				}
+			}
+		}
 	}
 }

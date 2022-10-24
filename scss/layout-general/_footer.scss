@@ -1,0 +1,31 @@
+@use "../util/" as u;
+footer {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-content: flex-end;
+	align-items: center;
+	height: u.rem(100);
+	padding-right: 0;
+	background-color: var(--footer);
+	@include u.breakpoint(medium) {
+	}
+	@include u.breakpoint(large) {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		padding-right: u.rem(50);
+	}
+	a {
+		margin: 0;
+		text-align: center;
+		font-weight: 700;
+		font-size: u.rem(12);
+		line-height: u.rem(24);
+		color: #ffffff;
+		@include u.breakpoint(medium) {
+			font-size: u.rem(15);
+		}
+		@include u.breakpoint(large) {
+			margin: u.rem(0) u.rem(25);
+			font-size: u.rem(20);
+		}
+	}
+}
