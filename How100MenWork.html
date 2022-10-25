@@ -40,6 +40,67 @@
             <h2>How We Work</h2>
             <p>100+ MEN ON A MISSION in the Des Moines area is a new organization, founded in 2011 by Mike Schneider and a group of dear friends, all community members in the Des Moines area.</p>
         </header>
+        <!-- <section class="intro">
+            <p class="intro__text">
+                Each member must commit to donating $100 per meeting ($400 per year). For young professionals under the age of 30, your commitment would be $50 per meeting ($200 per year).
+            </p>
+            <div class="intro__split">
+                <div class="intro__split__img">
+                    <picture>
+                        <img src="img/KiwanisMiracleLeague.jpg" alt="100+ Men on a Mission Check Image">
+                    </picture>
+                </div>
+                <div class="intro__split__text">
+                    The donations will be given to Des Moines Metro charities/non-profits/worthy causes serving the Des Moines area only. No national charities will be considered.
+                </div>
+            </div>
+            <div class="intro__banner">
+                <p>The purpose is for the contribution to stay 100% in the community.</p>
+            </div>
+            <p class="intro__conclude">
+                Three charities/non-profits/worthy causes will be presented at the meeting. The group will vote by ballot and majority rules. Although it may not be your first choice, you are still obligated to donate.
+            </p>
+        </section>
+        <section class="sponsored">
+            <h1>Which organizations are allowed to be sponsored?</h1>
+            <div class="sponsored__info">
+                <p>In order to be considered at a meeting, the organization must be located in the Des Moines area. It must be a non-profit organization recognized as a 501(c)(3) that serves Polk County and the surrounding area. If it is NOT a 501(c)(3), the presenter must advise the members of that information.</p>
+                <a id="501-Button">
+                    <span>&#9204;</span>
+                    <p>What is a 501(c)(3)?</p>
+                </a>
+                <div id="501-Modal" class="modal">
+                    <div class="modal__content">
+                        <div class="modal__content__header">
+                            <span class="close">&times;</span>
+                            <h2>What is a 501(c)(3)?</h2>
+                        </div>
+                        <div class="modal__content__body">
+                            <p>501(c)(3) is defined as "exemptions apply to corporations, and any community chest, fund or foundation, organized and operated exclusively for religious, charitable, scientific, testing for public safety, literary, educational purposes, to foster national or international amateur sports competition, promote the arts, or for the prevention of cruelty to children or animals." However, for the purposes of 100+ Men on a Mission all groups up for consideration must be local. For more information please visit the IRS Website.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="followUp">
+            <div class="followUp__split">
+                <div class="followUp__split__left">
+                    <p>If your name is drawn and you make a presentation and your charity is not chosen, you will still be eligible to put your name in the drawing at the next meeting.</p>
+                </div>
+                <div class="followUp__split__right">
+                    <p>For tax purposes, all checks will be made out to the chosen organization. If you are unable to attend, give your check to a member to deliver on your behalf.</p>
+                </div>
+            </div>
+            <div class="followUp__text">
+                <p>The charity/non-profit/worthy cause must agree to NOT use the donors' names for future solicitations or give the information out to the public. If the charity/non-profit/worthy cause does not adhere to this condition, they will be removed from any future consideration.</p>
+            </div>
+        </section> -->
+        <section class="faq">
+            <h1>Frequently Asked Questions</h1>
+            <div class="faq__questions">
+                
+            </div>
+        </section>
         <script>
             function openNav() {
               document.getElementById("mobile-nav").style.width = "100%";
@@ -47,6 +108,22 @@
             
             function closeNav() {
               document.getElementById("mobile-nav").style.width = "0%";
+            }
+            //Modal
+            var modal = document.getElementById("501-Modal");
+            var btn = document.getElementById("501-Button");
+            var closeBtn = document.getElementsByClassName("close")[0];
+
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
+            closeBtn.onclick = function() {
+                modal.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
             }
         </script>
     </body>
