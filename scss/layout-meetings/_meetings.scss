@@ -6,29 +6,16 @@
 	background: rgb(255, 255, 255);
 	background: linear-gradient(
 		180deg,
-		var(--light-purple) 35%,
-		var(--background-color) 35%
+		var(--purple) 25%,
+		var(--background-color) 25%
 	);
-	h1 {
-		margin: 0;
-		margin-top: u.rem(25);
-		text-align: center;
-		font-weight: 500;
-		font-size: clamp(u.rem(25), u.rem(25) + 2vw, u.rem(64));
-		line-height: 77px;
-		color: #ffffff;
-		@include u.breakpoint(medium) {
-			margin-top: u.rem(50);
-		}
-		@include u.breakpoint(large) {
-			margin-top: u.rem(75);
-		}
-	}
 	&__times {
 		display: grid;
 		grid-template-columns: 1fr;
 		margin: u.rem(20);
 		margin-bottom: u.rem(20);
+		border-radius: u.rem(10);
+		border: 3px solid white;
 		@include u.breakpoint(medium) {
 			grid-template-columns: 1fr 1fr;
 			margin: u.rem(40);
@@ -36,7 +23,7 @@
 
 		@include u.breakpoint(large) {
 			grid-template-columns: 1fr 1fr 1fr 1fr;
-			margin: u.rem(40);
+			margin: 0 u.rem(40);
 			@media (max-width: 1150px) {
 				margin-left: u.rem(10);
 				margin-right: u.rem(10);

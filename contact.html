@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>100+ Men on a Mission | DSM </title>
+        <link rel="stylesheet" href="/dist/style-contact.css">
+    </head>
+    <body>
+        <nav class="nav">
+            <a href="index.html" id="nav__img">
+                <picture class="nav__picture">
+                    <img src="img/logo.png" alt="100 Men on a Mission Logo">
+                </picture>
+            </a>
+            <div class="nav__links">
+                <a href="How100MenWork.html">How 100+ Works</a>
+                <a href="meetings.html">Meetings</a>
+                <a>Charities & Projects</a>
+            </div>
+            <div class="nav__extras">
+                <a>Golf Outing</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="nav__mobile">
+                <div id="mobile-nav" class="nav__mobile__overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="nav__mobile__overlay__content">
+                        <a href="How100MenWork.html">How 100+ Works</a>
+                        <a href="#">Meetings</a>
+                        <a>Charities & Projects</a>
+                        <a>Golf Outing</a>
+                        <a href="#">Contact Us</a>
+                    </div>
+                </div>
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+            </div>
+        </nav>
+        <header class="header">
+            <h1>100 Men on a Mission:</h1>
+            <h2>Contact Us</h2>
+            <p>Questions about 100 Men on a Mission? Reach out!</p>
+            <br>
+            <p><b>Email us at: kelcorsdad@msn.com</b</p>
+        </header>
+        <section class="contactInfo">
+            <div class="contactInfo__text">
+                <p>If you have a check to mail, send it to:</p>
+                <p>Mike Schneider<br>
+                    635 S.E. Tallgrass Lane<br>
+                    Waukee, Iowa 50263</p>
+                <p>Mike Schneider’s Phone Number:<br>
+                    515-867-1839</p>
+            </div>
+            <div class="contactInfo__social">
+                <div class="contactInfo__social__LinkedIn">
+                    <picture>
+                        <img src="img/linkedin-logo.png" alt="LinkedIn Logo">
+                    </picture>
+                    <p>100 Men On a Mission</p>
+                </div>
+                <div class="contactInfo__social__Twitter">
+                    <picture>
+                        <img src="img/twitter-logo.png" alt="Twitter Logo">
+                    </picture>
+                    <p>@100MenMission</p>
+                </div>
+            </div>
+        </section>
+        <script>
+            function openNav() {
+              document.getElementById("mobile-nav").style.width = "100%";
+            }
+            
+            function closeNav() {
+              document.getElementById("mobile-nav").style.width = "0%";
+            }
+            
+            //Accordion
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+
+                if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+                } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+                });
+            }
+        </script>
+    </body>
+    <footer>
+        <a href="How100MenWork.html">How 100+ Works</a>
+        <a href="meetings.html">Meetings</a>
+        <a >Charities & Projects</a>
+        <a href="#">Contact Us</a>
+    </footer>
+</html>

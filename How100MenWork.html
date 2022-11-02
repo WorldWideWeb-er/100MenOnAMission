@@ -9,27 +9,29 @@
     </head>
     <body>
         <nav class="nav">
-            <picture class="nav__picture">
-                <img src="img/logo.png" alt="100 Men on a Mission Logo">
-            </picture>
+            <a href="index.html" id="nav__img">
+                <picture class="nav__picture">
+                    <img src="img/logo.png" alt="100 Men on a Mission Logo">
+                </picture>
+            </a>
             <div class="nav__links">
-                <a>How 100+ Works</a>
-                <a>Meetings</a>
-                <a>Charities & Projects</a>
+                <a href="#">How 100+ Works</a>
+                <a href="meetings.html">Meetings</a>
+                <a >Charities & Projects</a>
             </div>
             <div class="nav__extras">
                 <a>Golf Outing</a>
-                <a>Contact Us</a>
+                <a href="contact.html">Contact Us</a>
             </div>
             <div class="nav__mobile">
                 <div id="mobile-nav" class="nav__mobile__overlay">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <div class="nav__mobile__overlay__content">
-                        <a>How 100+ Works</a>
-                        <a>Meetings</a>
+                        <a href="#">How 100+ Works</a>
+                        <a href="meetings.html">Meetings</a>
                         <a>Charities & Projects</a>
                         <a>Golf Outing</a>
-                        <a>Contact Us</a>
+                        <a href="contact.html">Contact Us</a>
                     </div>
                 </div>
                 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
@@ -40,7 +42,7 @@
             <h2>How We Work</h2>
             <p>100+ MEN ON A MISSION in the Des Moines area is a new organization, founded in 2011 by Mike Schneider and a group of dear friends, all community members in the Des Moines area.</p>
         </header>
-        <!-- <section class="intro">
+        <section class="intro">
             <p class="intro__text">
                 Each member must commit to donating $100 per meeting ($400 per year). For young professionals under the age of 30, your commitment would be $50 per meeting ($200 per year).
             </p>
@@ -94,11 +96,24 @@
             <div class="followUp__text">
                 <p>The charity/non-profit/worthy cause must agree to NOT use the donors' names for future solicitations or give the information out to the public. If the charity/non-profit/worthy cause does not adhere to this condition, they will be removed from any future consideration.</p>
             </div>
-        </section> -->
+        </section>
         <section class="faq">
             <h1>Frequently Asked Questions</h1>
             <div class="faq__questions">
+                <button class="accordion">Is my contribution tax deductible? How do I get my tax forms?</button>
+                <div class="panel">
+                    <p>Yes, your contribution is tax deductible unless a cause that is not a 501(c)(3) is voted on by the majority. Checks are written directly to the local organization NOT to 100+ Men on a Mission. Your tax forms will be sent to you directly from the organization that receives your contribution. PLEASE NOTE: Any sponsored non-profit is not allowed to create, sell or distribute a list with your contact information. They are not allowed to solicit you for further contributions. If this were to happen, the organization would no longer be considered at future meetings.</p>
+                </div>
+                <button class="accordion">How is the organization that receives the donation chosen?</button>
+                <div class="panel">
+                    <p>A member who has signed the commitment form can put the name of a local organization into the box for a random drawing. The organizers of the meeting will collect names of organizations from the participants as they arrive. Please note: you do not have to bring the name of a local organization, though it is encouraged. At random, three organizations will be selected from the box. The members who wrote down each name will be asked to come up and give a short 5 minute presentation as to why their chosen organization should receive the donation. A 5 minute question and answer period follows.</p>
+                </div>
                 
+                <button class="accordion">Can I just send the donation to the charity myself?
+                    Why do you have to send it on my behalf?</button>
+                <div class="panel">
+                    <p>The goal of the 100+ Men on a Mission organization is to make a large donation on behalf of the whole group. We want to be able to support this endeavor and give $10,000+ dollars at a time to make a large impact in our community, with each member's donation being part of the larger donation.</p>
+                </div>
             </div>
         </section>
         <script>
@@ -114,16 +129,36 @@
             var btn = document.getElementById("501-Button");
             var closeBtn = document.getElementsByClassName("close")[0];
 
-            btn.onclick = function() {
+            function openModal (){
                 modal.style.display = "block";
             }
-            closeBtn.onclick = function() {
+            ;
+            function closeModal (){
                 modal.style.display = "none";
             }
+            btn.addEventListener("click",openModal)
+            closeBtn.addEventListener("click",closeModal);
             window.onclick = function(event) {
                 if (event.target == modal) {
                     modal.style.display = "none";
                 }
+            }
+
+            //Accordion
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+
+                if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+                } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+                });
             }
         </script>
     </body>

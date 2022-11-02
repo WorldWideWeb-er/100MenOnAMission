@@ -15,14 +15,14 @@
 		color: #ffffff;
 	}
 	h1 {
-		font-size: clamp(u.rem(12), u.rem(15) + 5vw, u.rem(64));
+		font-size: u.rem(28);
 		margin-bottom: u.rem(10);
 		@include u.breakpoint(large) {
 			font-size: clamp(u.rem(12), u.rem(24) + 5vw, u.rem(64));
 		}
 	}
 	h2 {
-		font-size: clamp(u.rem(12), u.rem(15) + 5vw, u.rem(64));
+		font-size: u.rem(28);
 		@include u.breakpoint(large) {
 			font-size: clamp(u.rem(12), u.rem(24) + 5vw, u.rem(64));
 		}

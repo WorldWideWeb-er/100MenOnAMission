@@ -1,0 +1,93 @@
+@use "../util/" as u;
+.presentation {
+	h1 {
+		margin: 0;
+		padding: u.rem(10) 7%;
+		font-weight: 700;
+		font-size: u.rem(24);
+		line-height: u.rem(58);
+		text-align: center;
+		color: var(--purple);
+		@include u.breakpoint(medium) {
+			padding: u.rem(20) 7%;
+		}
+		@include u.breakpoint(large) {
+			padding: u.rem(20) 7%;
+			font-size: clamp(u.rem(16), u.rem(24) + 2vw, u.rem(48));
+		}
+	}
+	&__info {
+		p {
+			margin: 0;
+			padding: u.rem(10) u.rem(30);
+			font-weight: 500;
+			font-size: clamp(u.rem(8), u.rem(14) + 2vw, u.rem(28));
+			line-height: u.rem(36);
+			color: #ffffff;
+			background-color: var(--purple);
+			@include u.breakpoint(medium) {
+				padding: u.rem(10) u.rem(60);
+				line-height: u.rem(40);
+			}
+			@include u.breakpoint(large) {
+				padding: u.rem(10) u.rem(120);
+				line-height: u.rem(44);
+			}
+		}
+	}
+	&__qs {
+		display: grid;
+		grid-template-columns: 1fr;
+		margin: u.rem(10) 0;
+		@include u.breakpoint(large) {
+			grid-template-columns: 1fr 1fr;
+			margin: 0;
+		}
+
+		&__sideA,
+		&__sideB,
+		&__sideC {
+			p {
+				margin: 0;
+				font-weight: 600;
+				font-size: u.rem(16);
+				line-height: u.rem(39);
+				@include u.breakpoint(large) {
+					margin: u.rem(15) 0;
+					font-size: u.rem(18);
+				}
+				@include u.breakpoint(xlarge) {
+					font-size: u.rem(24);
+				}
+			}
+			p:last-of-type {
+				margin: 0;
+			}
+		}
+		&__sideA {
+			margin: 0 u.rem(40);
+			@include u.breakpoint(medium) {
+				margin: 0 u.rem(40);
+			}
+			@include u.breakpoint(large) {
+				margin-left: u.rem(80);
+			}
+		}
+		&__sideB {
+			margin: 0 u.rem(40);
+			@include u.breakpoint(medium) {
+				margin: 0 u.rem(40);
+			}
+			@include u.breakpoint(large) {
+				margin-right: u.rem(80);
+			}
+		}
+		&__sideC {
+			margin: u.rem(0) u.rem(40);
+			@include u.breakpoint(large) {
+				grid-column: 1 / 3;
+				margin: u.rem(10) u.rem(80);
+			}
+		}
+	}
+}

@@ -7,22 +7,26 @@
 	width: 100%;
 	padding: 0.5em 0;
 	border-bottom: 4px solid #653762;
-	&__picture {
+	#nav__img {
 		width: u.em(210);
 		margin: auto;
-		img {
-			margin: 0;
-			width: 100%;
-		}
-		@include u.breakpoint(large) {
-			width: u.em(210);
-			padding: 0 2em;
-			margin: 0;
+		.nav__picture {
 			img {
+				margin: 0;
 				width: 100%;
 			}
+			@include u.breakpoint(large) {
+				img {
+					width: 100%;
+				}
+			}
+		}
+		@include u.breakpoint(large) {
+			padding: 0 2em;
+			margin: 0;
 		}
 	}
+
 	&__links {
 		display: flex;
 		flex: 1;
@@ -80,9 +84,6 @@
 			a {
 				font-size: 16px;
 			}
-			// a:first-child {
-			// 	display: none;
-			// }
 		}
 		@include u.breakpoints-down(medium) {
 			display: none;
@@ -108,7 +109,7 @@
 				a {
 					padding: u.rem(6);
 					text-decoration: none;
-					font-size: u.rem(36);
+					font-size: u.rem(32);
 					color: var(--text-color2);
 					display: block;
 					transition: 0.2s;
@@ -122,6 +123,7 @@
 					top: u.rem(8);
 					right: u.rem(30);
 					font-size: u.rem(60);
+					color: white;
 				}
 				&__content {
 					position: relative;

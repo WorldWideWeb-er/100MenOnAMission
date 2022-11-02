@@ -1,0 +1,91 @@
+@use "../util/" as u;
+.contactInfo {
+	display: flex;
+	flex-direction: column;
+	@include u.breakpoint(medium) {
+		flex-direction: column;
+	}
+	@include u.breakpoint(xlarge) {
+		flex-direction: row;
+	}
+
+	&__text {
+		flex: 1;
+		padding-inline: u.rem(30);
+		background-color: var(--purple);
+		@include u.breakpoint(medium) {
+			padding-inline: u.rem(60);
+		}
+		@include u.breakpoint(large) {
+			padding-inline: u.rem(60);
+		}
+		@include u.breakpoint(xlarge) {
+			padding-inline: u.rem(120);
+		}
+		p {
+			font-weight: 500;
+			font-size: clamp(u.rem(14), u.rem(14) + 2vw, u.rem(24));
+			line-height: u.rem(39);
+			color: #ffffff;
+		}
+	}
+	&__social {
+		flex: 0.6;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		padding: u.rem(10) u.rem(30);
+		margin-inline: auto;
+		@include u.breakpoint(medium) {
+			padding: u.rem(10) u.rem(70);
+			margin-inline: auto;
+			flex-direction: row;
+		}
+		@include u.breakpoint(large) {
+			padding: u.rem(10) u.rem(150);
+			flex-direction: row;
+		}
+		@include u.breakpoint(xlarge) {
+			padding: u.rem(10) u.rem(120);
+			flex-direction: column;
+		}
+		p {
+			font-weight: 500;
+			font-size: clamp(u.rem(14), u.rem(5) + 2vw, u.rem(24));
+			line-height: u.rem(39);
+		}
+		&__LinkedIn,
+		&__Twitter {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			picture {
+				flex-basis: 60px;
+				padding-right: u.rem(0);
+				@include u.breakpoint(medium) {
+					flex-basis: 90px;
+					padding-right: u.rem(30);
+				}
+				@include u.breakpoint(xlarge) {
+					flex-basis: 120px;
+				}
+				img {
+					width: 50%;
+					@include u.breakpoint(medium) {
+						width: 100%;
+					}
+					@include u.breakpoint(large) {
+						width: 100%;
+					}
+					@include u.breakpoint(xlarge) {
+						width: 100%;
+					}
+				}
+			}
+			p {
+				margin: 0;
+				align-self: center;
+			}
+		}
+	}
+}

@@ -74,6 +74,8 @@
 					color: var(--purple);
 				}
 				p {
+					font-size: clamp(u.rem(16), u.rem(16) + 2vw, u.rem(24));
+					line-height: u.rem(28);
 					color: black;
 				}
 			}
