@@ -39,6 +39,16 @@
 			font-size: 24px;
 			line-height: 29px;
 			color: var(--text-color2);
+			-webkit-tap-highlight-color: transparent;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+		a:hover {
+			color: var(--purple);
 		}
 		a:first-child {
 			border-left: none;
@@ -65,6 +75,13 @@
 			font-size: 24px;
 			line-height: 29px;
 			color: var(--purple);
+			-webkit-tap-highlight-color: transparent;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
 		}
 		a:first-child {
 			padding: 0.4rem 1rem;
@@ -113,10 +130,18 @@
 					color: var(--text-color2);
 					display: block;
 					transition: 0.2s;
+					-webkit-tap-highlight-color: transparent;
+					-webkit-touch-callout: none;
+					-webkit-user-select: none;
+					-khtml-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					user-select: none;
 				}
 				a:hover,
 				a:focus {
 					color: #f1f1f1;
+					outline: none !important;
 				}
 				.closebtn {
 					position: absolute;

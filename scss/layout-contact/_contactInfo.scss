@@ -25,8 +25,11 @@
 		p {
 			font-weight: 500;
 			font-size: clamp(u.rem(14), u.rem(14) + 2vw, u.rem(24));
-			line-height: u.rem(39);
+			line-height: u.rem(28);
 			color: #ffffff;
+			@include u.breakpoint(large) {
+				line-height: u.rem(39);
+			}
 		}
 	}
 	&__social {
@@ -52,39 +55,48 @@
 		p {
 			font-weight: 500;
 			font-size: clamp(u.rem(14), u.rem(5) + 2vw, u.rem(24));
-			line-height: u.rem(39);
+			line-height: u.rem(16);
+			@include u.breakpoint(large) {
+				line-height: u.rem(39);
+			}
 		}
 		&__LinkedIn,
 		&__Twitter {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			picture {
-				flex-basis: 60px;
-				padding-right: u.rem(0);
-				@include u.breakpoint(medium) {
-					flex-basis: 90px;
-					padding-right: u.rem(30);
-				}
-				@include u.breakpoint(xlarge) {
-					flex-basis: 120px;
-				}
-				img {
-					width: 50%;
+			a {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				picture {
+					flex-basis: 60px;
+					padding-right: u.rem(0);
 					@include u.breakpoint(medium) {
-						width: 100%;
-					}
-					@include u.breakpoint(large) {
-						width: 100%;
+						flex-basis: 90px;
+						padding-right: u.rem(30);
 					}
 					@include u.breakpoint(xlarge) {
-						width: 100%;
+						flex-basis: 120px;
+					}
+					img {
+						width: 50%;
+						@include u.breakpoint(medium) {
+							width: 100%;
+						}
+						@include u.breakpoint(large) {
+							width: 100%;
+						}
+						@include u.breakpoint(xlarge) {
+							width: 100%;
+						}
 					}
 				}
-			}
-			p {
-				margin: 0;
-				align-self: center;
+				p {
+					margin: 0;
+					align-self: center;
+					color: black;
+				}
+				p:hover {
+					color: var(--purple);
+				}
 			}
 		}
 	}
