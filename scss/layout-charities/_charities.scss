@@ -2,80 +2,81 @@
 .charities {
 	display: flex;
 	flex-direction: column;
-	&__2022,
-	&__2021 {
+	&__2022 {
 		display: flex;
+		flex-direction: column;
 		margin-inline: auto;
 		width: 95%;
 		padding: u.rem(15) 0 u.rem(15);
 		border-bottom: 5px solid var(--purple);
-		h3 {
-			align-self: center;
-			margin: 0;
-			padding: 0 u.rem(30);
-			margin-right: u.rem(30);
-			font-weight: 600;
-			font-size: u.rem(64);
-			line-height: 77px;
-			border-right: 3px solid black;
-			color: var(--purple);
-		}
-		&__items {
-			width: 100%;
-			.meeting {
-				display: grid;
-				grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-				border-bottom: 2px solid lightgray;
-				.chosen {
-					display: grid;
-					grid-column: 1 / 3;
-					grid-template-columns: 1fr;
-					background-color: var(--light-purple);
-					&__title {
-						h4 {
-							text-align: center;
-						}
+		&__A,
+		&__B {
+			width: 90%;
+			display: flex;
+			flex-direction: row;
+			margin-inline: auto;
+			padding-bottom: u.rem(15);
+			border-bottom: 3px solid black;
+			.picture {
+				flex: 1;
+				margin-inline: auto;
+				picture {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+
+					img {
+						align-self: center;
+						width: 80%;
+						border: 3px solid black;
 					}
-					&__charity {
-						display: flex;
-						flex-direction: row;
-						p {
-							flex: 1;
-							text-align: center;
-							font-weight: 700;
-							font-size: u.rem(16);
-							color: white;
-						}
-						p:hover {
-							cursor: pointer;
-						}
+					figcaption {
+						text-align: center;
+						margin: u.rem(15) 0;
+						font-weight: 500;
+						font-size: u.rem(15);
 					}
 				}
-				.other {
-					display: grid;
-					grid-column: 3 / 6;
-					grid-template-columns: 1fr;
-					&__title {
-						h4 {
-							text-align: center;
+			}
+			.orgs {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				&__header,
+				&__other {
+					text-align: center;
+					p {
+						flex: 1;
+						text-align: center;
+						font-weight: 500;
+						font-size: u.rem(20);
+						span {
+							font-weight: 700;
+							color: var(--purple);
 						}
 					}
-					&__charity {
-						display: flex;
-						flex-direction: row;
-						p {
-							flex: 1;
-							text-align: center;
-							font-weight: 500;
-							font-size: u.rem(16);
-							span {
-								font-weight: 700;
-								color: var(--purple);
-							}
-						}
-						p:hover {
-							cursor: pointer;
-						}
+					p:hover {
+						cursor: pointer;
+					}
+				}
+				&__header {
+					h4 {
+						font-weight: 700;
+						font-size: u.rem(24);
+						color: black;
+					}
+					p {
+						font-weight: 700;
+						font-size: u.rem(20);
+						color: var(--purple);
+					}
+				}
+				&__other {
+					h4 {
+						font-weight: 700;
+						font-size: u.rem(20);
+						color: black;
 					}
 				}
 			}
