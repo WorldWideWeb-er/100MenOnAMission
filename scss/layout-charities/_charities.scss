@@ -7,9 +7,12 @@
 		margin: 0;
 		padding-bottom: u.rem(20);
 		font-weight: 600;
-		font-size: u.rem(64);
+		font-size: u.rem(34);
 		background-color: var(--purple);
 		color: #ffffff;
+		@include u.breakpoint(large) {
+			font-size: u.rem(64);
+		}
 	}
 	&__2022 {
 		display: flex;

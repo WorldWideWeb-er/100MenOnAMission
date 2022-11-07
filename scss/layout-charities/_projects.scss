@@ -7,10 +7,13 @@
 		margin: 0;
 		padding: u.rem(20) 0;
 		font-weight: 600;
-		font-size: u.rem(64);
+		font-size: u.rem(34);
 		border-top: 3px solid #ffffff;
 		background-color: var(--purple);
 		color: #ffffff;
+		@include u.breakpoint(large) {
+			font-size: u.rem(64);
+		}
 	}
 	&__2022 {
 		display: flex;

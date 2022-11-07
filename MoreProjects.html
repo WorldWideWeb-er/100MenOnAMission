@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>100+ Men on a Mission | DSM </title>
+        <link rel="stylesheet" href="/dist/style-moreprojects.css">
+    </head>
+    <body>
+        <nav class="nav">
+            <a href="index.html" id="nav__img">
+                <picture class="nav__picture">
+                    <img src="img/logo.png" alt="100 Men on a Mission Logo">
+                </picture>
+            </a>
+            <div class="nav__links">
+                <a href="How100MenWork.html">How 100+ Works</a>
+                <a href="meetings.html">Meetings</a>
+                <a href="Charities&Projects.html">Charities & Projects</a>
+            </div>
+            <div class="nav__extras">
+                <a>Golf Outing</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="nav__mobile">
+                <div id="mobile-nav" class="nav__mobile__overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="nav__mobile__overlay__content">
+                        <a href="How100MenWork.html">How 100+ Works</a>
+                        <a href="meetings.html">Meetings</a>
+                        <a href="Charities&Projects.html">Charities & Projects</a>
+                        <a>Golf Outing</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+            </div>
+        </nav>
+        <header class="header">
+            <h1>100 Men on a Mission:</h1>
+            <h2>Past Charities</h2>
+            <p>100 Men on a Mission has gone beyond signing a check, we have gone to the community to make more change happen.</p>
+        </header>
+        <section class="projects">
+            
+            
+        </section>
+        <script>
+            function openNav() {
+              document.getElementById("mobile-nav").style.width = "100%";
+            }
+            
+            function closeNav() {
+              document.getElementById("mobile-nav").style.width = "0%";
+            }
+            
+            //Accordion
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+
+                if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+                } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+                });
+            }
+        </script>
+    </body>
+    <footer>
+        <a href="How100MenWork.html">How 100+ Works</a>
+        <a href="meetings.html">Meetings</a>
+        <a href="Charities&Projects.html">Charities & Projects</a>
+        <a href="contact.html">Contact Us</a>
+    </footer>
+</html>
