@@ -1,4 +1,7 @@
 @use "../util/" as u;
+html {
+	scroll-behavior: smooth;
+}
 .charities {
 	display: flex;
 	flex-direction: column;
@@ -109,5 +112,26 @@
 
 	&__2012 {
 		border-bottom: none;
+	}
+}
+.return {
+	display: flex;
+	justify-content: center;
+	margin-bottom: u.rem(20);
+	a {
+		button {
+			margin-inline: auto;
+			padding: u.rem(10) u.rem(30);
+			margin-top: u.rem(15);
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 19px;
+			background-color: var(--purple);
+			border: none;
+			border-radius: 5px;
+			box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+			color: #ffffff;
+			cursor: pointer;
+		}
 	}
 }

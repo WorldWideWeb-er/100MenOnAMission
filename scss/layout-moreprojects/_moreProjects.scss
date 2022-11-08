@@ -1,0 +1,253 @@
+@use "../util/" as u;
+html {
+	scroll-behavior: smooth;
+}
+.moreProjects {
+	display: flex;
+	flex-direction: column;
+	.projects {
+		display: flex;
+		flex-direction: column;
+		margin-inline: auto;
+		width: 100%;
+		padding: u.rem(15) 0 u.rem(15);
+		@include u.breakpoint(large) {
+			width: 95%;
+		}
+		h4 {
+			text-align: center;
+			margin: 0;
+			padding: u.rem(20);
+			font-weight: 600;
+			font-size: u.rem(32);
+			color: var(--purple);
+		}
+		&__A,
+		&__B {
+			width: 95%;
+			display: flex;
+			flex-direction: column;
+			margin-inline: auto;
+			padding: u.rem(20) 0;
+			border-bottom: 3px solid black;
+			@include u.breakpoint(large) {
+				width: 90%;
+				flex-direction: row;
+			}
+			.picture {
+				flex: 1;
+				display: flex;
+				picture {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					width: 100%;
+					img {
+						align-self: center;
+						width: 90%;
+						border: 3px solid black;
+						@include u.breakpoint(medium) {
+							width: 60%;
+						}
+						@include u.breakpoint(large) {
+							width: 70%;
+						}
+					}
+				}
+			}
+			.about {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				align-self: center;
+				text-align: center;
+				p {
+					flex: 1;
+					text-align: center;
+					padding: u.rem(10) u.rem(20);
+					margin: 0;
+					font-weight: 500;
+					font-size: u.rem(18);
+					word-wrap: break-word;
+					@include u.breakpoint(large) {
+						margin: u.rem(15);
+						font-size: u.rem(30);
+						word-wrap: break-word;
+					}
+				}
+			}
+		}
+		&__A {
+			@include u.breakpoint(large) {
+				.picture {
+					order: 1;
+				}
+				.about {
+					order: 2;
+				}
+			}
+		}
+		&__B {
+			.picture {
+				order: 1;
+			}
+			.about {
+				order: 2;
+			}
+			@include u.breakpoint(large) {
+				.picture {
+					order: 2;
+				}
+				.about {
+					order: 1;
+				}
+			}
+		}
+		&__B:last-of-type {
+			border-bottom: none;
+		}
+		#HITILProject,
+		#RHaWProject,
+		#HFeetProject,
+		#DHouseProject {
+			display: grid;
+			grid-template-columns: 1fr;
+			@include u.breakpoint(large) {
+			}
+			#projectIntro {
+				grid-column: 1/3;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-bottom: u.rem(20);
+				p {
+					text-align: center;
+					padding: u.rem(10) u.rem(20);
+					margin: 0;
+					font-weight: 500;
+					font-size: u.rem(18);
+					word-wrap: break-word;
+					@include u.breakpoint(large) {
+						margin: u.rem(15);
+						font-size: u.rem(30);
+						word-wrap: break-word;
+					}
+				}
+				#more {
+					display: none;
+				}
+				button {
+					width: 50%;
+					padding: u.rem(10);
+					margin-top: u.rem(15);
+					font-weight: 500;
+					font-size: 16px;
+					line-height: 19px;
+					background-color: var(--purple);
+					border: none;
+					border-radius: 5px;
+					box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+					color: #ffffff;
+					cursor: pointer;
+				}
+			}
+			.info {
+				width: 95%;
+				display: flex;
+				flex-direction: column;
+				margin-inline: auto;
+				@include u.breakpoint(large) {
+					width: 100%;
+					flex-direction: row;
+				}
+				.picture {
+					flex: 1;
+					display: flex;
+					picture {
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						width: 100%;
+						img {
+							align-self: center;
+							width: 90%;
+							border: 3px solid black;
+							@include u.breakpoint(medium) {
+								width: 60%;
+							}
+							@include u.breakpoint(large) {
+								width: 70%;
+							}
+						}
+					}
+				}
+				.about {
+					flex: 1;
+					display: flex;
+					flex-direction: column;
+					align-self: center;
+					text-align: center;
+					p {
+						flex: 1;
+						text-align: center;
+						margin: 0;
+						font-weight: 500;
+						font-size: u.rem(18);
+						word-wrap: break-word;
+						@include u.breakpoint(large) {
+							margin: u.rem(15);
+							font-size: u.rem(30);
+							word-wrap: break-word;
+						}
+						a {
+							color: var(--purple);
+							cursor: pointer;
+						}
+					}
+					picture {
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						width: 100%;
+						margin-bottom: u.rem(20);
+						@include u.breakpoint(large) {
+							margin-bottom: u.rem(0);
+						}
+						img {
+							align-self: center;
+							width: 90%;
+							border: 3px solid black;
+							@include u.breakpoint(medium) {
+								width: 100%;
+							}
+							@include u.breakpoint(large) {
+								width: 70%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.return {
+	display: flex;
+	justify-content: center;
+	margin-bottom: u.rem(20);
+	a {
+		button {
+			margin-inline: auto;
+			padding: u.rem(10) u.rem(30);
+			margin-top: u.rem(15);
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 19px;
+			background-color: var(--purple);
+			border: none;
+			border-radius: 5px;
+			box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+			color: #ffffff;
+			cursor: pointer;
+		}
+	}
+}
