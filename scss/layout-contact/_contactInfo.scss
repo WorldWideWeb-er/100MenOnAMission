@@ -1,4 +1,27 @@
 @use "../util/" as u;
+.header {
+	.contactButtons {
+		display: flex;
+		button {
+			margin: u.rem(0) u.rem(10);
+			padding: u.rem(10);
+			font-weight: 600;
+			font-size: u.rem(15);
+			border-radius: 0.25em;
+			background-color: #ffffff;
+			color: var(--purple);
+			border: none;
+			cursor: pointer;
+			@include u.breakpoint(medium) {
+				margin: u.rem(5) u.rem(20) 0;
+				font-size: u.rem(20);
+			}
+			@include u.breakpoint(large) {
+				font-size: u.rem(20);
+			}
+		}
+	}
+}
 .contactInfo {
 	display: flex;
 	flex-direction: column;

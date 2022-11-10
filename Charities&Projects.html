@@ -16,21 +16,21 @@
             </a>
             <div class="nav__links">
                 <a href="How100MenWork.html">How 100+ Works</a>
-                <a href="meetings.html">Meetings</a>
+                <a href="Meetings.html">Meetings</a>
                 <a href="#">Charities & Projects</a>
             </div>
             <div class="nav__extras">
-                <a>Golf Outing</a>
-                <a href="contact.html">Contact Us</a>
+                <a href="Golf.html">Golf Outing</a>
+                <a href="Contact.html">Contact Us</a>
             </div>
             <div class="nav__mobile">
                 <div id="mobile-nav" class="nav__mobile__overlay">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <div class="nav__mobile__overlay__content">
                         <a href="How100MenWork.html">How 100+ Works</a>
-                        <a href="#">Meetings</a>
+                        <a href="Meetings.html">Meetings</a>
                         <a href="#">Charities & Projects</a>
-                        <a>Golf Outing</a>
+                        <a href="Golf.html">Golf Outing</a>
                         <a href="contact.html">Contact Us</a>
                     </div>
                 </div>
@@ -164,29 +164,12 @@
             function closeNav() {
               document.getElementById("mobile-nav").style.width = "0%";
             }
-            
-            //Accordion
-            var acc = document.getElementsByClassName("accordion");
-            var i;
-
-            for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-
-                if (panel.style.maxHeight) {
-                panel.style.maxHeight = null;
-                } else {
-                panel.style.maxHeight = panel.scrollHeight + "px";
-                } 
-                });
-            }
         </script>
     </body>
     <footer>
         <a href="How100MenWork.html">How 100+ Works</a>
-        <a href="meetings.html">Meetings</a>
+        <a href="Meetings.html">Meetings</a>
         <a href="#">Charities & Projects</a>
-        <a href="contact.html">Contact Us</a>
+        <a href="Contact.html">Contact Us</a>
     </footer>
 </html>

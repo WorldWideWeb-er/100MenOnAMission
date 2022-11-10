@@ -29,7 +29,7 @@
 	}
 	p {
 		font-size: clamp(u.rem(12), u.rem(12) + 2vw, u.rem(36));
-		line-height: u.rem(25);
+		line-height: u.rem(28);
 		margin: 0;
 		@include u.breakpoint(medium) {
 			line-height: u.rem(30);

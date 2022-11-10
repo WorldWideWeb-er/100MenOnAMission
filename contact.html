@@ -16,11 +16,11 @@
             </a>
             <div class="nav__links">
                 <a href="How100MenWork.html">How 100+ Works</a>
-                <a href="meetings.html">Meetings</a>
+                <a href="Meetings.html">Meetings</a>
                 <a href="Charities&Projects.html">Charities & Projects</a>
             </div>
             <div class="nav__extras">
-                <a>Golf Outing</a>
+                <a href="Golf.html">Golf Outing</a>
                 <a href="#">Contact Us</a>
             </div>
             <div class="nav__mobile">
@@ -28,9 +28,9 @@
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <div class="nav__mobile__overlay__content">
                         <a href="How100MenWork.html">How 100+ Works</a>
-                        <a href="#">Meetings</a>
+                        <a href="Meetings.html">Meetings</a>
                         <a href="Charities&Projects.html">Charities & Projects</a>
-                        <a>Golf Outing</a>
+                        <a href="Golf.html">Golf Outing</a>
                         <a href="#">Contact Us</a>
                     </div>
                 </div>
@@ -42,7 +42,11 @@
             <h2>Contact Us</h2>
             <p>Questions about 100 Men on a Mission? Reach out!</p>
             <br>
-            <p><b>Email us at: kelcorsdad@msn.com</b</p>
+            <p><b>Want to Email us? </b></p>
+            <div class="contactButtons">
+                <a href="mailto:webmaster@example.com"><button onclick="myFunction()">Send Mike an Email</button></a>
+                <button onclick="copyEmail()">Copy Email Address</button>
+            </div>
         </header>
         <section class="contactInfo">
             <div class="contactInfo__text">
@@ -80,28 +84,15 @@
             function closeNav() {
               document.getElementById("mobile-nav").style.width = "0%";
             }
-            
-            //Accordion
-            var acc = document.getElementsByClassName("accordion");
-            var i;
-
-            for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-
-                if (panel.style.maxHeight) {
-                panel.style.maxHeight = null;
-                } else {
-                panel.style.maxHeight = panel.scrollHeight + "px";
-                } 
-                });
+            //Email Copy to Clipboard
+            function copyEmail() {
+            navigator.clipboard.writeText("kelcorsdad@msn.com");
             }
         </script>
     </body>
     <footer>
         <a href="How100MenWork.html">How 100+ Works</a>
-        <a href="meetings.html">Meetings</a>
+        <a href="Meetings.html">Meetings</a>
         <a href="Charities&Projects.html">Charities & Projects</a>
         <a href="#">Contact Us</a>
     </footer>

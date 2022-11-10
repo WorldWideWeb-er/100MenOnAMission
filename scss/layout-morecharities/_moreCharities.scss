@@ -17,32 +17,56 @@ html {
 	&__2013,
 	&__2012 {
 		display: flex;
+		flex-direction: column;
 		margin-inline: auto;
-		width: 95%;
+		width: 90%;
 		padding: u.rem(15) 0 u.rem(15);
 		border-bottom: 5px solid var(--purple);
+		@include u.breakpoint(large) {
+			flex-direction: row;
+			width: 95%;
+		}
 		h3 {
 			align-self: center;
 			margin: 0;
 			padding: 0 u.rem(30);
 			margin-right: u.rem(30);
 			font-weight: 600;
-			font-size: u.rem(64);
-			line-height: 77px;
-			border-right: 3px solid black;
+			font-size: u.rem(32);
+			border-right: none;
 			color: var(--purple);
+			@include u.breakpoint(medium) {
+				font-size: clamp(u.rem(18), u.rem(20) + 2vw, u.rem(64));
+			}
+			@include u.breakpoint(large) {
+				font-size: clamp(u.rem(18), u.rem(20) + 2vw, u.rem(64));
+				border-right: 3px solid black;
+			}
+			@include u.breakpoint(xlarge) {
+				font-size: u.rem(64);
+			}
 		}
 		&__items {
 			width: 100%;
 			.meeting {
 				display: grid;
-				grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-				border-bottom: 2px solid lightgray;
+				grid-template-columns: 1fr;
+				margin-bottom: u.rem(10);
+				border-bottom: 3px solid var(--purple);
+				@include u.breakpoint(large) {
+					grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+					margin-bottom: u.rem(0);
+					border-bottom: 2px solid lightgray;
+				}
+
 				.chosen {
 					display: grid;
-					grid-column: 1 / 3;
+					grid-column: 1 / 6;
 					grid-template-columns: 1fr;
 					background-color: var(--light-purple);
+					@include u.breakpoint(large) {
+						grid-column: 1 / 3;
+					}
 					&__title {
 						h4 {
 							text-align: center;
@@ -77,8 +101,11 @@ html {
 				}
 				.other {
 					display: grid;
-					grid-column: 3 / 6;
+					grid-column: 1 / 6;
 					grid-template-columns: 1fr;
+					@include u.breakpoint(large) {
+						grid-column: 3 / 6;
+					}
 					&__title {
 						h4 {
 							text-align: center;
@@ -86,8 +113,11 @@ html {
 					}
 					&__charity {
 						display: flex;
-						flex-direction: row;
+						flex-direction: column;
 						justify-content: space-around;
+						@include u.breakpoint(medium) {
+							flex-direction: row;
+						}
 						a {
 							p {
 								flex: 1;
@@ -104,8 +134,22 @@ html {
 								cursor: pointer;
 							}
 						}
+						p {
+							flex: 1;
+							text-align: center;
+							font-weight: 500;
+							font-size: u.rem(16);
+							color: black;
+							span {
+								font-weight: 700;
+								color: var(--purple);
+							}
+						}
 					}
 				}
+			}
+			.meeting:last-child {
+				border-bottom: none;
 			}
 		}
 	}
@@ -123,7 +167,7 @@ html {
 			margin-inline: auto;
 			padding: u.rem(10) u.rem(30);
 			margin-top: u.rem(15);
-			font-weight: 500;
+			font-weight: 600;
 			font-size: 16px;
 			line-height: 19px;
 			background-color: var(--purple);
