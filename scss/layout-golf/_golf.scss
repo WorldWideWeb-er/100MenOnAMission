@@ -23,7 +23,7 @@
 			justify-content: center;
 			img {
 				width: 90%;
-				border: 3px solid black;
+				// border: 3px solid black;
 				@include u.breakpoint(medium) {
 					width: 80%;
 				}

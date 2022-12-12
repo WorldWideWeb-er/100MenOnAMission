@@ -44,8 +44,8 @@
             <br>
             <p><b>Want to Email us? </b></p>
             <div class="contactButtons">
-                <a href="mailto:webmaster@example.com"><button onclick="myFunction()">Send Mike an Email</button></a>
-                <button onclick="copyEmail()">Copy Email Address</button>
+                <a href="mailto:kelcorsdad@msn.com"><button>Send Mike an Email</button></a>
+                <p>kelcorsdad@msn.com</p>
             </div>
         </header>
         <section class="contactInfo">
@@ -76,6 +76,14 @@
                 </div>
             </div>
         </section>
+        <section class="otherLinks">
+            <h4>Related Links</h4>
+            <p><a href="https://www.100menofnorwalk.com/">100 Men of Norwalk</a> is off to a great start. Kudos to Brad and the men for rising up to the challenge of supporting their great community. Yet another example where sharing our simple, collective philanthropy model can take roots quickly. Let's see which Iowa community is next.</p>
+            <p><a href="https://www.facebook.com/100menredrock/">100+ Men On a Mission - Red Rock</a> was launched in 2016 after seeing the KCCI piece and after visiting 100 Men On a Mission in West Des Moines. Good luck, neighbors!</p>
+            <p><a>100+ Women Who Care</a> was founded by Sue Kenny, Dotty Thurston and Liz Kennedy, was the model for 100+ MEN ON A MISSION. Thanks to these wonderful ladies for their support.</p>
+            <p><a href="https://www.100whocarealliance.org/">100 Who Care Alliance</a> is a hub for more than 100 chapters around the world. A great resource for existing and prospective new clubs/chapters.</p>
+            <p><a href="https://100whocarealliance.org/about-us/history/">Our History</a> - learn about the history of the 100 Men / Women collective philanthropy.</p>
+        </section>
         <script>
             function openNav() {
               document.getElementById("mobile-nav").style.width = "100%";
@@ -86,7 +94,8 @@
             }
             //Email Copy to Clipboard
             function copyEmail() {
-            navigator.clipboard.writeText("kelcorsdad@msn.com");
+                navigator.clipboard.writeText("kelcorsdad@msn.com");
+                document.getElementById('copyEmail').innerHTML = "kelcorsdad@msn.com"
             }
         </script>
     </body>

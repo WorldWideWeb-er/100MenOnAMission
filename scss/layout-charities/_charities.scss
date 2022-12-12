@@ -88,11 +88,12 @@
 							font-size: u.rem(30);
 						}
 					}
-					p {
+					a {
 						flex: 1;
 						text-align: center;
 						font-weight: 500;
 						font-size: u.rem(15);
+						color: var(--text-color);
 						@include u.breakpoint(large) {
 							margin: u.rem(15);
 							font-size: u.rem(20);
@@ -107,16 +108,23 @@
 					}
 				}
 				&__header {
-					p {
+					a {
 						font-weight: 700;
 						font-size: u.rem(20);
 						color: var(--purple);
 						@include u.breakpoint(large) {
 							font-size: u.rem(25);
 						}
+						span {
+							font-weight: 700;
+							color: var(--text-color);
+						}
 					}
 				}
 				&__other {
+					display: flex;
+					flex-direction: column;
+					justify-content: space-around;
 					h4 {
 						font-weight: 700;
 						font-size: u.rem(23);

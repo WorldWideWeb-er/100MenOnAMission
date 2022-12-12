@@ -2,8 +2,13 @@
 .header {
 	.contactButtons {
 		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		button,
+		p {
+			margin: u.rem(10) 0;
+		}
 		button {
-			margin: u.rem(0) u.rem(10);
 			padding: u.rem(10);
 			font-weight: 600;
 			font-size: u.rem(15);
@@ -13,7 +18,6 @@
 			border: none;
 			cursor: pointer;
 			@include u.breakpoint(medium) {
-				margin: u.rem(5) u.rem(20) 0;
 				font-size: u.rem(20);
 			}
 			@include u.breakpoint(large) {
@@ -121,6 +125,26 @@
 					color: var(--purple);
 				}
 			}
+		}
+	}
+}
+.otherLinks {
+	padding: u.rem(30) 5% u.rem(15);
+	@include u.breakpoint(large) {
+		padding: u.rem(15) 8% u.rem(30);
+	}
+	h4 {
+		font-size: u.rem(28);
+		color: var(--purple);
+		@include u.breakpoint(large) {
+			font-size: clamp(u.rem(12), u.rem(24) + 5vw, u.rem(32));
+		}
+	}
+	p {
+		a {
+			font-weight: 600;
+			font-size: u.rem(20);
+			color: var(--purple);
 		}
 	}
 }
