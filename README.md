@@ -39,6 +39,7 @@ CSS/SCSS Changes
 
 - All css was made through SCSS found in the 'scss' file
 - Each page has its own folder titled respectively
+- When uploading, Upload both the SCSS files and the 'dist' folder which contains all the css / css.map that the scss refrences to.
 
 layout-general Folder
 
@@ -52,7 +53,11 @@ Files named 'globals' & 'util'
 
 ## Update Log
 
+Feb 09,2022
 Initial completion as of February 09, 2022, sent into review for further editing.
+
+Dec 13, 2022
+Final review and editing completed. Uploading to http://100menonamission.com/
 
 ## Author
 
